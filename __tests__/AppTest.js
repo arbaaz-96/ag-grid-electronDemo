@@ -1,11 +1,9 @@
 const Application = require("spectron").Application;
 const electronPath = require("electron");
 const path = require("path");
-//const agGrid=require('ag-grid-react').AgGridReact;
 
 jest.setTimeout(50000);
 let app;
-//let ag_grid_utils = require("ag-grid-testing");
 
 describe('Ag Grid E2E testing with spectron', function () {
     
@@ -26,8 +24,6 @@ describe('Ag Grid E2E testing with spectron', function () {
             return app.stop();
     });
 
-    //let agGridComp;
-
     it('display the electron app window', async () => {
         const count = await app.client.getWindowCount();       
         expect(count).toBe(1);
@@ -38,21 +34,8 @@ describe('Ag Grid E2E testing with spectron', function () {
         expect(title).toBe('Ag Grid Demo');
     });
 
-    /*it('ag grid component returns a valid api instance',async () => {
-        const agGridComp = await app.client.react$('AgGridReact');
-        expect(agGridComp.gridApi).toBeTruthy();
-    });*/
-
-    /*it('should have expected column headers',async () => {
-        var headers=await app.client.$$(".ag-header-cell-text");
-        var harr=[];
-        var htext;
-        
-       for(let i=0;i<headers.length;i++)
-        {
-            htext=await headers[i].getText();
-            harr.push(htext);
-        }
-        expect(harr).toEqual(['Id','Name','Age','Address','City','Salary','Department']);
-    });*/
+    it('ag grid component returns a valid api instance',async () => {
+        const agGridComp = await app.client.react$('AgGridReact'); //here the api is coming as undefined and test case failed
+        expect(agGridComp.api).toBeTruthy();
+    });
 });
