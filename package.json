@@ -43,11 +43,7 @@
     ]
   },
   "devDependencies": {
-    "ag-grid-testing": "0.0.2",
     "electron": "^11.2.3",
-    "protractor": "^7.0.0",
-    "spectron": "^13.0.0",
-    "typescript": "^4.1.5",
-    "webdriver-manager": "^12.1.8"
+    "spectron": "^13.0.0"
   }
 }
