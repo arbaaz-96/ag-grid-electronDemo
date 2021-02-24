@@ -1,5 +1,4 @@
-import React from 'react';  
-import './App.css';  
+import React from 'react';   
 import Aggriddemo from './Aggriddemo'  
 function App() {  
   return (  
