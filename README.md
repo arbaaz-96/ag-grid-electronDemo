@@ -5,5 +5,6 @@ This sample has an ag-grid with some dummy entries which is created in React and
 2. Open the sample with Code Editor (eg. Visual Studio code)
 3. Run the following commands in order:
   - npm install
+  - npm install jest@26.6.0
   - npm run build
   - npm run estart
